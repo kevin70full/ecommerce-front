@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { StateProvider } from './StateProvider';
+import reducer, { initialState } from './Reducer';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <StateProvider initialState={initialState} reducer={reducer}>
+    <PayPalScriptProvider options={{"client-id":"AQy5LdZoa0hE1iTsECXJ8wuX5xZIrJNrtKaRtAIYD1G9khgpGjnELk74BQ5puhmqKjDKYQwnk_Xd4m1h"}}>
+
+      <App />
+      </PayPalScriptProvider>
+    
+    </StateProvider>
+   
   </React.StrictMode>
 );
 
