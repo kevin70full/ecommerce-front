@@ -51,7 +51,7 @@ export default function SignIn() {
     e.preventDefault();
   
     try {
-      const response = await fetch('http://localhost:3001/login', {
+      const response = await fetch('https://fierce-reaches-03717.herokuapp.com/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: correo, password: clave })

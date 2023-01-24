@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 
 export default function Products() {
 
-  const url = "http://localhost:3001/Obtener-Productos"
+  const url = " https://fierce-reaches-03717.herokuapp.com/Obtener-Productos"
   const [products, setProducts] = useState()
   const fetchMongo = async () => {
     const response = await fetch(url)
