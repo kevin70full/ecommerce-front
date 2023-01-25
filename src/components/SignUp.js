@@ -53,7 +53,7 @@ export default function SignUp() {
       .then((data) => {
         if(data.status === 200 && data.message === "Usuario registrado"){
             alert("Usuario registrado con éxito");
-            navigate("/SignIn");
+            
         }else {
             alert(data.message);
         }
@@ -62,6 +62,7 @@ export default function SignUp() {
       .catch((err) => {
         console.log(err);
       });
+      navigate("/SignIn");
   };
 
 
@@ -156,7 +157,7 @@ export default function SignUp() {
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <RouteLink to="/SignIn" variant="body2">
-                  ¿Ya tienes una cuenta? Registrarse
+                  ¿Ya tienes una cuenta? Inicia Sesion
                 </RouteLink>
               </Grid>
             </Grid>
