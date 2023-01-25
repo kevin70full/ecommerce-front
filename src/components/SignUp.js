@@ -51,12 +51,20 @@ export default function SignUp() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-      })
+        if(data.status === 200 && data.message === "Usuario registrado"){
+            alert("Usuario registrado con éxito");
+            navigate("/SignIn");
+        }else {
+            alert(data.message);
+        }
+    })
+    
       .catch((err) => {
         console.log(err);
       });
   };
+
+
   
 
   return (
