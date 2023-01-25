@@ -44,7 +44,7 @@ export default function SignUp() {
       email: correo,
       password: clave,
     };
-    fetch('https://fierce-reaches-03717.herokuapp.com/register', {
+    fetch("https://fierce-reaches-03717.herokuapp.com/register", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),

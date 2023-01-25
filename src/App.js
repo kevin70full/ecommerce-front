@@ -16,7 +16,7 @@ function App() {
     // Realizar una llamada al endpoint de login para verificar el estado de autenticación del usuario
     const checkAuthStatus = async () => {
     try {
-    const response = await fetch('http://localhost:3001/login', {
+    const response = await fetch("http://localhost:3001/login", {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ token: localStorage.getItem('token') })

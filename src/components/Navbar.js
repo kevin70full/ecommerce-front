@@ -44,7 +44,7 @@ export default function Navbar() {
         if (user) {
           try {
             const token = Cookies.get('token');
-            const response = await axios.get('https://fierce-reaches-03717.herokuapp.com/verify', {
+            const response = await axios.get("https://fierce-reaches-03717.herokuapp.com/verify", {
               headers: {
                 'Authorization': `Bearer ${token}`
               }
